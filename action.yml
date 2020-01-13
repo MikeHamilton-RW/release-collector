@@ -1,0 +1,23 @@
+name: "Release Collector Action"
+description: "Collect releases from other repos."
+author: "MikeHamilton-RW"
+inputs:
+  GITHUB_TOKEN:
+    description: "Github secret token to allow automated publishing of artifacts to a release."
+  REPOSITORY:
+    description: "user/repo_name"
+  RELEASE_BRANCH:
+    description: "Typically the master branch"
+  DEVELOPMENT_BRANCH:
+    description: "Typically the develop or integration branch"
+outputs:
+  ARTIFACT_NAME:
+    description: "Name of the artifact being saved."
+  RELEASE_NOTES:
+    description: "String consisting of the release notes"
+runs:
+  using: "docker"
+  image: "Dockerfile"
+branding:
+  icon: 'tag'
+  color: 'purple'
