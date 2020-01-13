@@ -1,5 +1,5 @@
 # Release Collector Action
-Pull releases from other repos to assist in creating a release collection. This action is for those working on sevearl difference repos, wanting to completely automate their workflow, and they have the need to create release collections from numnerous repos. This action will create a PR from development branch changes into the release branch, merge those changes once the status checks pass, create a release from the release branch, and then import that release and the release notes into your repo.  
+Pull releases from other repos to assist in creating a release collection. This action is for those working on several different repos, wanting to completely automate their workflow, and they have the need to create release collections from numnerous repos. This action will create a PR from development branch changes into the release branch, merge those changes once the status checks pass, create a release from the release branch, and then import that release and the release notes into your repo.  
 
 If you have 30 repos, utilize this action 30 times in your yaml script, zip up the files, and create a custom release collection consisting of all of your other releases. This is helpful if you work with any sort of hardware-in-the-loop or in the embedded space.
 
@@ -59,7 +59,7 @@ jobs:
 
 
 ## Trigger via repo dispatch
-- You probably don't want to create an entire release colelction each time you push this yaml script, so I highly reccomend only run on repository_dispatch:
+- You probably don't want to create an entire release collection each time you push this yaml script, so I highly reccomend only run on repository_dispatch:
 ```
 curl -H "Accept: application/vnd.github.everest-preview+json" \
     -H "Authorization: token ${GITHUB_TOKEN}" \
