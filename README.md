@@ -17,7 +17,7 @@ If you have 30 repos, utilize this action 30 times in your yaml script, zip up t
 
 
 ## Example
-This example will create a release when tag is pushed:
+This example will create a release when a repository dispatch event with the event type "create_release_collection" is sent:
 
 ```yml
 name: Release Collection Creator
